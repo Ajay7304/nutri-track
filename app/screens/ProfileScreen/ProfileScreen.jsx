@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import Colors from '../../Utils/Colors';
+import { FontAwesome6 } from '@expo/vector-icons';
 
 const ProfileScreen = () => {
   return (
@@ -17,26 +18,30 @@ const ProfileScreen = () => {
       </View>
 
       <View style={styles.userInfo}>
-        <View style={styles.avatar}></View>
+        <View style={styles.avatarContainer}>
+          <View style={styles.innerCircle}>
+            <View style={styles.innerIcon} ><FontAwesome6 style={styles.avatar} name="user" size={30} color="white" /></View>
+          </View>
+        </View>
         <View>
-          <Text style={styles.userName}>Najma Khan</Text>
+          <Text style={styles.userName}>Ajay Yadav</Text>
         </View>
 
         <View style={styles.userDetailsContainer}>
           <View style={styles.userDetailsSection}>
-            <Text style={styles.userDetails}>Age: 29 </Text>
+            <Text style={styles.userDetails}>Age: 24 </Text>
             <Text style={styles.userDetails}>Height: 5'4" </Text>
           </View>
 
           <View style={styles.userDetailsSection}>
-            <Text style={styles.userDetails}>Gender: Female </Text>
-            <Text style={styles.userDetails}>Starting Weight: 63kg </Text>
+            <Text style={styles.userDetails}>Gender: Male </Text>
+            <Text style={styles.userDetails}>Starting Weight: 60kg </Text>
           </View>
         </View>
       </View>
 
       <View style={styles.fitnessJourneyContainer}>
-        <Text style={styles.sectionTitle}>Your Fitness Journey</Text>
+        <Text style={styles.sectionTitle}>Your Fitness Journey <Ionicons name="calendar-outline" size={24} color="black" /></Text>
         <View style={styles.fitnessJourney}>
           <View style={styles.progressBar}>
             {[...Array(8)].map((_, i) => (
@@ -72,12 +77,12 @@ const ProfileScreen = () => {
           <View style={styles.weightSection}>
             <View>
               <Text style={styles.weightLabel}>Current weight</Text>
-              <Text style={styles.weightValue}>63 kg</Text>
+              <Text style={styles.weightValue}>60 kg</Text>
             </View>
 
             <View>
               <Text style={styles.weightLabel}>Desired weight</Text>
-              <Text style={styles.weightValue}>58 kg</Text>
+              <Text style={styles.weightValue}>70 kg</Text>
             </View>
           </View>
 
@@ -171,19 +176,42 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     position: "relative",
-    elevation: 2,
+    elevation: 5,
     borderWidth: 0.5,
     borderColor: 'rgba(0, 0, 0, 0.1)',
   },
-  avatar: {
+  avatarContainer: {
     width: 60,
     height: 60,
-    borderRadius: 50,
-    backgroundColor: '#17A2B8',
-    marginBottom: 10,
+    borderRadius: 30,
+    backgroundColor: '#00BCD4',
+    justifyContent: 'center',
+    alignItems: 'center',
     position: "absolute",
     top: -30,
     left: 20
+  },
+  innerCircle: {
+    width: 55,
+    height: 55,
+    borderRadius: 30,
+    backgroundColor: '#FFFFFF',
+  },
+  avatar: {
+    width: 52,
+    height: 52,
+    borderRadius: 25,
+    backgroundColor: '#00BCD4',
+    justifyContent: 'center',
+    alignItems: 'center',
+    // width: 60,
+    // height: 60,
+    // borderWidth:1,
+    // borderRadius: 50,
+    // marginBottom: 10,
+    // position: "absolute",
+    // top: -30,
+    // left: 20
   },
   userName: {
     fontSize: 22,
@@ -209,7 +237,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
     marginBottom: 20,
-    elevation: 2,
+    elevation: 5,
     borderWidth: 0.5,
     borderColor: 'rgba(0, 0, 0, 0.1)',
   },
@@ -224,6 +252,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 15,
+    justifyContent: "center"
   },
   progressBar: {
     flexDirection: 'row',

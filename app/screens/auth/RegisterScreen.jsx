@@ -1,4 +1,4 @@
-import { View, Text, TextInput, StyleSheet, TouchableOpacity, Alert } from 'react-native'
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert,ImageBackground } from 'react-native';
 import React, { useState } from 'react'
 import Colors from '../../Utils/Colors';
 
@@ -31,8 +31,9 @@ export default function RegisterScreen({ navigation }) {
   }
 
   return (
+    <ImageBackground style={styles.imageBg} source={require("../../../assets/welcomeImg.jpg")}>
     <View style={styles.container}>
-      <Text style={styles.title}>Register</Text>
+      {/* <Text style={styles.title}>Register</Text> */}
       <View style={styles.center}>
         <Text style={styles.inputName}>Name</Text>
         <TextInput
@@ -68,34 +69,44 @@ export default function RegisterScreen({ navigation }) {
         </TouchableOpacity>
       </View>
     </View>
+    </ImageBackground>
   )
 }
 
 const styles = StyleSheet.create({
+  imageBg:{
+    flex:1,
+    marginTop: 30,
+    height:"100%",
+    width:"100%",
+    // opacity:0.5
+  },
   container: {
     flex: 1,
-    marginTop: 30,
-    backgroundColor: Colors.White
-
+    // marginTop: 30,
+    backgroundColor: "rgba(0,0,0,0.1)",
+    justifyContent:"center"
   },
-  title: {
-    width: "100%",
-    textAlign: 'center',
-    padding: 30,
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
-    fontSize: 30,
-    fontWeight: 'bold',
-    marginBottom: 40,
-    backgroundColor: Colors.Primary,
-    color: Colors.White
-  },
+  // title: {
+  //   width: "100%",
+  //   textAlign: 'center',
+  //   padding: 30,
+  //   borderBottomLeftRadius: 20,
+  //   borderBottomRightRadius: 20,
+  //   fontSize: 30,
+  //   fontWeight: 'bold',
+  //   marginBottom: 40,
+  //   backgroundColor: Colors.Primary,
+  //   color: Colors.White
+  // },
   center: {
     padding: 30,
   },
   inputName: {
     fontSize: 20,
-    marginBottom: 10
+    marginBottom: 10,
+    color:Colors.White
+
   },
   input: {
     width: '100%',
@@ -109,17 +120,14 @@ const styles = StyleSheet.create({
 
   },
   button: {
-    borderWidth: 1,
-    borderRadius: 99,
-    borderColor: Colors.Black,
-    padding: 15,
+    borderRadius: 10,
+    padding: 10,
     backgroundColor: Colors.Primary,
-    marginTop: 50
+    marginTop: 30
   },
   buttonText: {
     textAlign: "center",
     color: '#fff',
-    fontWeight: 'bold',
-    fontSize: 25,
+    fontSize: 22,
   }
 })
