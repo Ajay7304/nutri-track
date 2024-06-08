@@ -1,5 +1,6 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useEffect ,useCallback } from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Header from '../../components/Header';
 import DailyIntake from '../../components/DailyIntake';
 import DatePicker from '../../components/DatePicker';
@@ -30,6 +31,7 @@ import tomatoSalad from "../../../assets/tomatoSalad.jpeg";
 
 const HomeScreen = () => {
   const [currentCalories, setCurrentCalories] = useState(0);
+  const [userName, setUserName] = useState('');
 
   const updateCalories = useCallback((calories) => {
     setCurrentCalories((prevCalories) => prevCalories + calories);
@@ -89,9 +91,20 @@ const HomeScreen = () => {
     },
   };
 
+  useEffect(() => {
+    const getUserData = async () => {
+      const userData = await AsyncStorage.getItem('currentUser');
+      if (userData) {
+        const { name } = JSON.parse(userData);
+        setUserName(name);
+      }
+    };
+    getUserData();
+  }, []);
+
   return (
     <ScrollView style={styles.container}>
-      <Header name="Ajay Yadav" purpose="Welcome to your daily diet plan for improved and healthy hair!" />
+      <Header name={userName} purpose="Welcome to your daily diet plan for improved and healthy hair!" />
       <DailyIntake calories={{ current: currentCalories, target: 2045 }} carbs={47} protein={11} fat={11} />
       <DatePicker />
       {Object.entries(mealData).map(([title, data], index) => (

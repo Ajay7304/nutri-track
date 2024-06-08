@@ -1,10 +1,26 @@
-import React from 'react';
+import React ,{useEffect,useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import Colors from '../../Utils/Colors';
 import { FontAwesome6 } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+
 
 const ProfileScreen = () => {
+  const [user, setUser] = useState({});
+
+  useEffect(() => {
+    const getUserData = async () => {
+      const userData = await AsyncStorage.getItem('currentUser');
+      if (userData) {
+        setUser(JSON.parse(userData));
+      }
+    };
+    getUserData();
+  }, []);
+
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
@@ -24,7 +40,7 @@ const ProfileScreen = () => {
           </View>
         </View>
         <View>
-          <Text style={styles.userName}>Ajay Yadav</Text>
+          <Text style={styles.userName}>{user.name}</Text>
         </View>
 
         <View style={styles.userDetailsContainer}>

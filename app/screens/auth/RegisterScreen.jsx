@@ -1,8 +1,7 @@
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert,ImageBackground } from 'react-native';
 import React, { useState } from 'react'
 import Colors from '../../Utils/Colors';
-
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as authService from "../../services/authService"
 export default function RegisterScreen({ navigation }) {
   const [name, setName] = useState("");
@@ -23,6 +22,8 @@ export default function RegisterScreen({ navigation }) {
 
     try {
       const user = await authService.register(name, email, password);
+      await AsyncStorage.setItem('currentUser', JSON.stringify(user));
+      console.log("current User : " , user);
       navigation.navigate('DetailsNav', { user });
     } catch (error) {
       Alert.alert('Error', error.message);

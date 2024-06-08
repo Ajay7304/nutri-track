@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert,ImageBackground } from 'react-native';
 import * as authService from '../../services/authService';
 import Colors from '../../Utils/Colors';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 
@@ -20,7 +21,7 @@ const LoginScreen = ({ navigation }) => {
     try {
       // Call the login service
       const user = await authService.login(email, password);
-
+      await AsyncStorage.setItem('currentUser', JSON.stringify(user));
       // Login successful, navigate to the next screen
       navigation.navigate('App', { user });
     } catch (error) {
