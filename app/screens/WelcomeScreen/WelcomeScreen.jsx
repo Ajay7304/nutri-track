@@ -25,12 +25,14 @@ export default function WelcomeScreen() {
       <View >
       <TouchableOpacity onPress={login} style={styles.button}>
         <Text style={{fontSize:20,
-        color:Colors.White,textAlign:"center",
+    fontFamily:"Abel",
+    color:Colors.White,textAlign:"center",
         }} >Login</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={register} style={styles.button}>
         <Text style={{fontSize:20,
-          color:Colors.White,textAlign:"center"
+    fontFamily:"Abel",
+    color:Colors.White,textAlign:"center",
         }} >Register</Text>
       </TouchableOpacity>
       </View>
@@ -54,7 +56,8 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius:30,
     borderBottomRightRadius:30,
     color:Colors.White,
-    marginTop:30
+    marginTop:30,
+    fontFamily:"Abel",
   },
   center:{
     // height:500,
@@ -78,6 +81,8 @@ const styles = StyleSheet.create({
     color:Colors.Black,
     fontWeight:'bold',
     // fontStyle:'italic',
+    fontFamily:"Abel",
+
   },
   buttonContainer:{
     flexDirection:"row",

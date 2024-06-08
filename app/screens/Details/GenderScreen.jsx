@@ -85,7 +85,9 @@ const styles = StyleSheet.create({
     fontSize: 26,
     fontWeight: 'bold',
     marginBottom: 16,
-    textAlign:"center"
+    textAlign:"center",
+    fontFamily:"Abel",
+
   },
   genderButtons: {
     flexDirection: 'row',
@@ -105,6 +107,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign:"center",
     color: '#333',
+    fontFamily:"Abel",
+
   },
   genderButtonTextSelected: {
     color: '#fff',
@@ -119,6 +123,8 @@ const styles = StyleSheet.create({
     color: Colors.White,
     fontSize: 16,
     textAlign: 'center',
+    fontFamily:"Abel",
+
   },
 });
 

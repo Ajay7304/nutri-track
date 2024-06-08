@@ -69,18 +69,22 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
   },
   day: {
-    fontSize: 18,
+    fontSize: 20,
     color: '#666',
-    marginBottom:10
+    marginBottom:10,
+    fontFamily:"Abel",
+
   },
   date: {
-    fontSize: 16,
-    fontWeight: 'bold',
+    fontSize: 17,
+    // fontWeight: 'bold',
     color: '#333',
     backgroundColor:Colors.LightGray,
     padding:5,
     paddingHorizontal:6,
-    borderRadius:50
+    borderRadius:50,
+    fontFamily:"Abel",
+
   },
   activeDate: {
     color: Colors.White,

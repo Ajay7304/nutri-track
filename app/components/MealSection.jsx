@@ -11,7 +11,7 @@ const MealSection = ({ title, time, items, updateCalories }) => (
     </View>
     <View>
       {items.map((item, index) => (
-        <FoodItem key={index} {...item} updateCalories={updateCalories} imageSource={item.imageSource} />
+        <FoodItem key={index} {...item} updateCalories={updateCalories} />
       ))}
     </View>
   </View>

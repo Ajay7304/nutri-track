@@ -41,11 +41,15 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         color: Colors.White,
+    fontFamily:"Abel",
+
       },
       purpose: {
-        fontSize: 16,
+        fontSize: 17,
         color: Colors.White,
         marginTop: 5,
+    fontFamily:"Abel",
+
       },
 })
 

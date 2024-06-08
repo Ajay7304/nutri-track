@@ -71,6 +71,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     color: Colors.text,
+    fontFamily:"Abel",
+
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -91,6 +93,8 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 16,
     color: Colors.text,
+    fontFamily:"Abel",
+
   },
   buttonTextSelected: {
     color: Colors.White,
@@ -105,6 +109,8 @@ const styles = StyleSheet.create({
   continueButtonText: {
     fontSize: 16,
     color: Colors.White,
+    fontFamily:"Abel",
+
   },
 });
 

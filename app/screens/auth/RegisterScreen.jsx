@@ -105,7 +105,8 @@ const styles = StyleSheet.create({
   inputName: {
     fontSize: 20,
     marginBottom: 10,
-    color:Colors.White
+    color:Colors.White,
+    fontFamily:"Abel",
 
   },
   input: {
@@ -129,5 +130,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: '#fff',
     fontSize: 22,
+    fontFamily:"Abel",
+
   }
 })

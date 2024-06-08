@@ -62,11 +62,15 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: 'bold',
     color: '#333',
+    fontFamily:"Abel",
+
   },
   quantity: {
-    fontSize: 14,
+    fontSize: 15,
     color: '#666',
     marginTop: 5,
+    fontFamily:"Abel",
+
   },
   actions: {
     flexDirection: 'row',
@@ -77,10 +81,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#00BCD4',
     paddingVertical: 10,
     borderRadius: 5,
-    alignItems:"center"
+    alignItems:"center",
+    
   },
   logButtonText: {
+    fontSize:16,
     color: '#FFFFFF',
+    fontFamily:"Abel",
+
   },
   alternativesButton: {
     borderWidth:1,
@@ -91,6 +99,9 @@ const styles = StyleSheet.create({
   },
   alternativesButtonText: {
     color: Colors.Black,
+    fontSize:16,
+    fontFamily:"Abel",
+
   },
 });
 

@@ -40,7 +40,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     // marginBottom: 40,
     backgroundColor: Colors.Primary,
-    color: Colors.White
+    color: Colors.White,
+    fontFamily:"Abel",
+
   },
   center:{
     padding:30
@@ -54,6 +56,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     // marginBottom: 24,
+    fontFamily:"Abel",
+
   },
   continueButton: {
     backgroundColor:Colors.Primary,
@@ -65,6 +69,8 @@ const styles = StyleSheet.create({
   continueButtonText: {
     color: '#fff',
     fontSize: 20,
-    textAlign:"center"
+    textAlign:"center",
+    fontFamily:"Abel",
+
   },
 });

@@ -38,6 +38,8 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: Colors.Gray,
+    fontFamily:"Abel",
+
   },
   caloriesContainer: {
     flexDirection: 'row',
@@ -48,11 +50,15 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: 'bold',
     color: Colors.Primary,
+    fontFamily:"Abel",
+
   },
   caloriesUnit: {
     fontSize: 16,
     color: '#666',
     marginLeft: 5,
+    fontFamily:"Abel",
+
   },
   macros: {
     flexDirection: 'row',
@@ -67,13 +73,17 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   macroLabel: {
-    fontSize: 16,
+    fontSize: 17,
     color: '#666',
     marginTop: 5,
+    fontFamily:"Abel",
+
   },
   macroValue: {
-    fontSize: 14,
+    fontSize: 15,
     color: Colors.Black,
+    fontFamily:"Abel",
+
   },
 });
 

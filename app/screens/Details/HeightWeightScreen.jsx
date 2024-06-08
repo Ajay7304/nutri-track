@@ -65,6 +65,8 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
+    fontFamily:"Abel",
+
   },
   input: {
     width: '78%',
@@ -84,8 +86,9 @@ const styles = StyleSheet.create({
   },
   continueButtonText: {
     color: '#fff',
-    fontWeight: 'bold',
     fontSize: 16,
+    fontFamily:"Abel",
+
   },
 });
 

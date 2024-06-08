@@ -169,6 +169,8 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 20,
     fontWeight: 'bold',
+    fontFamily:"Abel",
+
   },
   userInfo: {
     marginBottom: 20,
@@ -231,6 +233,8 @@ const styles = StyleSheet.create({
   userDetails: {
     fontSize: 16,
     color: Colors.LightText,
+    fontFamily:"Abel",
+
   },
   fitnessJourneyContainer: {
     backgroundColor: Colors.White,
@@ -252,7 +256,9 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 15,
-    justifyContent: "center"
+    justifyContent: "center",
+    fontFamily:"Abel",
+
   },
   progressBar: {
     flexDirection: 'row',
@@ -273,8 +279,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   weekLabel: {
-    fontSize: 12,
+    fontSize: 13,
     color: '#666',
+    fontFamily:"Abel",
+
   },
   infoSection: {
     flexDirection: 'row',
@@ -298,15 +306,21 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     marginTop: 10,
+    fontFamily:"Abel",
+
   },
   infoValue: {
     fontSize: 18,
-    marginBottom: 10
+    marginBottom: 10,
+    fontFamily:"Abel",
+
   },
   infoSubtext: {
-    fontSize: 12,
+    fontSize: 13,
     color: '#666',
     marginTop: 5,
+    fontFamily:"Abel",
+
   },
   weightSectionContainer: {
     flexDirection: 'column',
@@ -324,15 +338,21 @@ const styles = StyleSheet.create({
   weightLabel: {
     fontSize: 16,
     fontWeight: 'bold',
+    fontFamily:"Abel",
+
   },
   weightValue: {
     fontSize: 18,
     marginBottom: 5,
+    fontFamily:"Abel",
+
   },
   weightSubtext: {
-    fontSize: 14,
+    fontSize: 13,
     color: '#666',
     marginTop: 10,
+    fontFamily:"Abel",
+
   },
   nutritionSectionContainer: {
     marginBottom: 20,
@@ -351,12 +371,16 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   nutritionLabel: {
-    fontSize: 14,
+    fontSize: 15,
+    fontFamily:"Abel",
+
   },
   nutritionValue: {
     fontSize: 16,
     fontWeight: 'bold',
     marginTop: 5,
+    fontFamily:"Abel",
+
   },
   editableSection: {
     flexDirection: 'row',
@@ -376,12 +400,16 @@ const styles = StyleSheet.create({
   editableSectionLabel: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: Colors.LightText
+    color: Colors.LightText,
+    fontFamily:"Abel",
+
   },
   editableSectionValue: {
     fontSize: 16,
     color: '#666',
     // marginTop: 5,
+    fontFamily:"Abel",
+
   },
 });
 
